@@ -161,6 +161,7 @@
         width: 9cm;
         height: 6cm;
         display: block;
+        object-fit: cover;
     }
 
 }
@@ -296,5 +297,9 @@ body {
         border: none;
         height: 40px;
         padding: 0px 10px 0px 10px;
+    }
+
+    .content-image {
+        background-image: url("../noimage.png");
     }
 }
