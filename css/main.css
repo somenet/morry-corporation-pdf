@@ -134,6 +134,26 @@
         display: block;
     }
 
+    .content-sub::placeholder {
+        color: transparent;
+        /* プレースホルダーを見えなくする */
+    }
+
+    .content-sub::-webkit-input-placeholder {
+        /* Chrome, Safari, Edge */
+        color: transparent;
+    }
+
+    .content-sub:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: transparent;
+    }
+
+    .content-sub::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: transparent;
+    }
+
     .content-image {
         margin: 0cm;
         padding: 0cm;
@@ -213,7 +233,7 @@ body {
         }
 
         .content-sub {
-            width: calc(100vw - 20px);
+            width: calc(100vw - 25px);
             margin-bottom: 10px;
             height: 16px;
         }
@@ -226,7 +246,7 @@ body {
         .content-comment {
             margin-left: 10px;
             height: calc(140px - 45px);
-            width: calc(100vw - 180px);
+            width: calc(100vw - 185px);
             position: absolute;
         }
     }
@@ -268,5 +288,13 @@ body {
 
     .main>div {
         margin-top: 10px;
+    }
+
+    .print-button {
+        color: #fff;
+        background-color: #000;
+        border: none;
+        height: 40px;
+        padding: 0px 10px 0px 10px;
     }
 }
