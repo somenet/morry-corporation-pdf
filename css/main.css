@@ -1,0 +1,272 @@
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        border: none;
+        outline: none;
+    }
+
+    textarea {
+        border: none;
+        resize: none;
+        overflow: hidden;
+    }
+
+    .page {
+        margin: 0cm;
+        padding: 0cm;
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+    }
+
+    .pr-hide {
+        display: none;
+    }
+
+    .pr-show {
+        display: block !important;
+    }
+
+    /* content-head */
+    .head {
+        height: 2cm;
+        padding: 0.5cm 0cm 0cm 0cm;
+        margin: 0 1cm 0 1cm;
+        border-bottom: 0.5mm solid #000;
+    }
+
+    .head-title {
+        font-size: 0.8cm;
+        height: 1.8cm;
+        padding: 0cm;
+        width: 15cm;
+        margin: 0cm;
+        text-align: left;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .main {
+        padding: 0cm;
+        margin: 0cm;
+    }
+
+    .main>div {
+        position: absolute;
+        width: 9cm;
+        height: 8cm;
+    }
+
+    /* content-main */
+    .content-file {
+        display: none;
+    }
+
+    .content-comment {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .formatted-date {
+        font-size: 0.4cm;
+        text-align: right;
+        right: 1cm;
+        top: 1.8cm;
+        position: absolute;
+    }
+
+    /* content-main-p */
+    .content-1 {
+        left: 1cm;
+        top: 2.75cm;
+    }
+
+    .content-2 {
+        left: 11cm;
+        top: 2.75cm;
+    }
+
+    .content-3 {
+        left: 1cm;
+        top: 11.25cm;
+    }
+
+    .content-4 {
+        left: 11cm;
+        top: 11.25cm;
+    }
+
+    .content-5 {
+        left: 1cm;
+        top: 19.75cm;
+    }
+
+    .content-6 {
+        left: 11cm;
+        top: 19.75cm;
+    }
+
+    .btm-logo {
+        position: absolute;
+        width: 5cm;
+        left: calc(50% - 2.5cm);
+        top: 28cm;
+        margin: 0cm;
+        padding: 0cm;
+    }
+
+    .content-sub {
+        height: 0.8cm;
+        font-size: 0.6cm;
+        font-style: bold;
+        margin: 0cm;
+        padding: 0cm;
+        display: block;
+    }
+
+    .content-image {
+        margin: 0cm;
+        padding: 0cm;
+        top: 0.8cm;
+        width: 9cm;
+        height: 6cm;
+        display: block;
+    }
+
+}
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+    padding: 0px;
+}
+
+.pr-show {
+    display: none;
+}
+
+@media not print {
+    @media screen and (max-width: 768px) {
+
+        /* Mobile styles */
+        .head-title {
+            width: calc(100vw - 20px);
+            display: block;
+        }
+
+        .head-date {
+            margin-left: 0px;
+            width: calc(100vw - 20px);
+            display: block;
+        }
+
+        .content-image {
+            width: calc(100vw - 20px);
+            aspect-ratio: 3 / 2;
+            display: block;
+        }
+
+        .head {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .content-sub,
+        .content-comment {
+            width: calc(100vw - 20px);
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+
+        /* Desktop styles */
+        .head-title {
+            width: calc(80vw - 20px);
+        }
+
+        .head-date {
+            margin-left: 10px;
+            width: calc(20vw - 20px);
+            text-align: right;
+        }
+
+        .content-image {
+            width: 150px;
+            height: 100px;
+            aspect-ratio: auto;
+        }
+
+        .head {
+            display: flex;
+        }
+
+        .content-sub {
+            width: calc(100vw - 20px);
+            margin-bottom: 10px;
+            height: 16px;
+        }
+
+        .main>div {
+            height: 140px;
+            position: relative;
+        }
+
+        .content-comment {
+            margin-left: 10px;
+            height: calc(140px - 45px);
+            width: calc(100vw - 180px);
+            position: absolute;
+        }
+    }
+
+    .head-title {
+        padding-top: 0px;
+        margin-top: 0px;
+        height: 32px;
+    }
+
+    .head-date {
+        padding-top: 0px;
+        margin-top: 0px;
+        padding: 1px;
+        height: 32px;
+    }
+
+    textarea {
+        border: #000 solid 1px;
+        resize: none;
+    }
+
+    input {
+        border: #000 solid 1px;
+    }
+
+    .head {
+        justify-content: space-between;
+    }
+
+    .content-file {
+        display: none;
+    }
+
+    .content-image {
+        cursor: pointer;
+        object-fit: cover;
+    }
+
+    .main>div {
+        margin-top: 10px;
+    }
+}
