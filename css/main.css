@@ -162,6 +162,7 @@
         height: 6cm;
         display: block;
         object-fit: cover;
+        border: none;
     }
 
 }
@@ -301,5 +302,14 @@ body {
 
     .content-image {
         background-image: url("../noimage.png");
+        background-color: transparent;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .content-image:not([src]) {
+        opacity: 0;
     }
 }
